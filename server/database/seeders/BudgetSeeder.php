@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Issue;
+use App\Models\Budget;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class IssueSeeder extends Seeder
+class BudgetSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class IssueSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('issues')->truncate();
-        Issue::factory(5)->create();
+        DB::table('budgets')->truncate();
+        Budget::factory(20)->create();
     }
 }

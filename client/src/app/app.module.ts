@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IssueNewComponent } from './components/issue/issue-new/issue-new.component';
 import { IssueEditComponent } from './components/issue/issue-edit/issue-edit.component';
 import { HttpClientModule } from "@angular/common/http";
+import { AboutComponent } from './components/about/about.component';
+import { BudgetListComponent } from './components/budget/budget-list/budget-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,10 @@ import { HttpClientModule } from "@angular/common/http";
     IssueFormComponent,
     IssueNewComponent,
     IssueEditComponent,
-    StatusFilterComponent
+    StatusFilterComponent,
+    AboutComponent,
+    BudgetListComponent,
+    BudgetListComponent
   ],
   imports: [
     BrowserModule,

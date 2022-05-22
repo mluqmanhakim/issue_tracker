@@ -5,11 +5,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from '../components/index/index.component';
 import { IssueEditComponent } from '../components/issue/issue-edit/issue-edit.component';
 import { IssueNewComponent } from '../components/issue/issue-new/issue-new.component';
+import { AboutComponent } from '../components/about/about.component';
+import { BudgetListComponent } from '../components/budget/budget-list/budget-list.component';
 
 const routes: Routes = [
   {
     path: '',
     component: IndexComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+  },
+  {
+    path: 'budget',
+    component: BudgetListComponent,
   },
   {
     path: 'issues',
