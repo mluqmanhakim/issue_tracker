@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\IssueController;
 use App\Http\Controllers\TokenController;
 use Illuminate\Http\Request;
@@ -21,3 +22,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::resource('issues', IssueController::class)->except([ 'edit', 'create' ]);
+
+Route::resource('budget', BudgetController::class)->except([ 'edit', 'create' ]);
