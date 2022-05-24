@@ -16,12 +16,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Title</td>
-              <td>100</td>
-              <td>Food</td>
+            <tr *ngFor="let budget of budgets">
+              <td>{{ budget.title }}</td>
+              <td>{{ budget.amount }}</td>
+              <td>{{ budget.category }}</td>
               <td>
-                  <a class="btn btn-warning btn-sm" href="#" routerLink="#">Edit</a>
+                  <a class="btn btn-warning btn-sm" [routerLink]="['/budget', budget.id, 'edit']">Edit</a>
               </td>
             </tr>
           </tbody>

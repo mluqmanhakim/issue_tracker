@@ -15,6 +15,8 @@ import { IssueEditComponent } from './components/issue/issue-edit/issue-edit.com
 import { HttpClientModule } from "@angular/common/http";
 import { AboutComponent } from './components/about/about.component';
 import { BudgetListComponent } from './components/budget/budget-list/budget-list.component';
+import { BudgetEditComponent } from './components/budget/budget-edit/budget-edit.component';
+import { BudgetFormComponent } from './components/budget/budget-form/budget-form.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BudgetListComponent } from './components/budget/budget-list/budget-list
     StatusFilterComponent,
     AboutComponent,
     BudgetListComponent,
-    BudgetListComponent
+    BudgetListComponent,
+    BudgetEditComponent,
+    BudgetFormComponent
   ],
   imports: [
     BrowserModule,
