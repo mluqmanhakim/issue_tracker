@@ -7,6 +7,7 @@ import { IssueEditComponent } from '../components/issue/issue-edit/issue-edit.co
 import { IssueNewComponent } from '../components/issue/issue-new/issue-new.component';
 import { AboutComponent } from '../components/about/about.component';
 import { BudgetListComponent } from '../components/budget/budget-list/budget-list.component';
+import { BudgetEditComponent } from '../components/budget/budget-edit/budget-edit.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'budget',
     component: BudgetListComponent,
+  },
+  {
+    path: 'budget/:id/edit',
+    component: BudgetEditComponent,
   },
   {
     path: 'issues',
