@@ -16,6 +16,7 @@ const httpOptions = {
 export class BudgetService {
 
   private url = 'http://localhost:8000/api/budget';
+  private urlIncomeOutcome = 'http://localhost:8000/api/income-outcome';
 
   constructor(private httpClient: HttpClient) {
   }
@@ -34,6 +35,10 @@ export class BudgetService {
 
   public add(newIssue: Budget): Observable<Budget> {
     return this.httpClient.post<Budget>(this.url, newIssue, httpOptions);
+  }
+
+  public getIncomeOutcome() {
+    return this.httpClient.get(this.urlIncomeOutcome, httpOptions);
   }
 
 }

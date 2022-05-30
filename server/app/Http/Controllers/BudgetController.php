@@ -9,7 +9,7 @@ class BudgetController extends Controller
 {
     public function index()
     {
-        return Budget::all();
+        return Budget::orderBy('created_at', 'DESC')->get();
     }
 
     public function show(Budget $budget)
@@ -37,5 +37,14 @@ class BudgetController extends Controller
 
         $budget->update($validated_data);
         return $budget;
+    }
+
+    public function get_income_outcome()
+    {
+        $incomes = Budget::where("amount", ">=", 0)->pluck('amount')->toArray();
+        $outcomes = Budget::where("amount", "<", 0)->pluck('amount')->toArray();
+        $data['income'] = array_sum($incomes);
+        $data['outcome'] = array_sum($outcomes);
+        return $data;
     }
 }

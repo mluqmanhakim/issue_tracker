@@ -24,3 +24,5 @@ use Illuminate\Support\Facades\Route;
 Route::resource('issues', IssueController::class)->except([ 'edit', 'create' ]);
 
 Route::resource('budget', BudgetController::class)->except([ 'edit', 'create' ]);
+
+Route::get('/income-outcome', [BudgetController::class, 'get_income_outcome'])->name('income_outcome');

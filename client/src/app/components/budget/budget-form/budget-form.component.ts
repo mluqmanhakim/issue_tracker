@@ -38,9 +38,7 @@ export class BudgetFormComponent implements OnChanges {
 
   public setIsInvalidClass(property: string): boolean {
     return (
-      this.budgetForm.get(property)?.invalid &&
-      (this.budgetForm.get(property)?.dirty ||
-        this.budgetForm.get(property)?.touched)
+      this.budgetForm.get(property)?.invalid && (this.budgetForm.get(property)?.dirty || this.budgetForm.get(property)?.touched)
     );
   }
 

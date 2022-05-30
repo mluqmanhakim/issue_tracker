@@ -1,12 +1,40 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="display-4">Family Budget</h1>
-    <p class="lead">Track the budget of our familiy</p>
-    <p><a class="btn btn-primary" routerLink="/issues/new" href="#" role="button">New issue</a></p>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <div class="jumbotron">
+            <div class="text-center">
+              <div class="alert alert-warning" role="alert">
+                <b>Attention!</b> Please run the API server on http://localhost:8000. Otherwise, please change it on budget.service.ts file. 
+              </div>
+              <h1 class="display-4">Family Budget</h1>
+              <p class="lead">Track our family's budget here</p>
+              
+              <img
+                src="assets/img/front.jpg"
+                class="img-fluid"
+                alt="Responsive image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <h1 class="display-4">Overall income</h1>
-    <h1 class="display-4">1000</h1>
-    <h1 class="display-4">Overall outcome</h1>
-    <h1 class="display-4">1000</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="alert alert-success" role="alert">
+            Overall income
+            <h1> {{ income | currency:'EUR' }}</h1>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="alert alert-danger" role="alert">
+            Overall outcome
+            <h1> {{ outcome | currency:'EUR' }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
